@@ -1,4 +1,4 @@
-let array = [];
+const array = [];
 
 for (let i = 0; i < 5; i++) {
   const numero = 1 + Math.round(Math.random() * 1000);
