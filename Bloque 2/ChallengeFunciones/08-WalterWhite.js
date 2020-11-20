@@ -4,8 +4,8 @@ const texto =
 filtrar = (texto) => {
   let blanco = 0;
 
-  for (let i = 0; i < texto.length; i++) {
-    switch (texto[i]) {
+  for (letra of texto) {
+    switch (letra) {
       case " ":
         blanco++;
     }

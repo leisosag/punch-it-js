@@ -3,8 +3,8 @@ const string = "hola";
 separarLetras = (string) => {
   const letras = [];
 
-  for (let i = 0; i < string.length; i++) {
-    letras.push(string[i]);
+  for (letra of string) {
+    letras.push(letra);
   }
 
   return letras;
