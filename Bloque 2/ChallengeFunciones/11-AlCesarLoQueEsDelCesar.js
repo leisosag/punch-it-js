@@ -1,6 +1,24 @@
-const msj = "abcdefghijklmnopqrstuvwxyz";
+const msj = prompt("Ingresa el mensaje a cifrar");
 
-const cifrar = (msj, despl = 3) => {
+let msjCifrado = "";
+
+cifrar = (msj, despl = 3) => {
+  const abc = "abcdefghijklmnopqrstuvwxyz";
+  const abcArr = abc.split("");
+
+  for (let i = 0; i < msj.length; i++) {
+    for (let j = 0; j < abcArr.length; j++) {
+      if (msj[i] === abcArr[j]) {
+        abcArr[j + despl] === undefined
+          ? (msjCifrado += abcArr[j - (abcArr.length - despl)])
+          : (msjCifrado += abcArr[j + despl]);
+      }
+    }
+  }
+  return msjCifrado;
+};
+
+const cifrarUnicode = (msj, despl = 3) => {
   const msjArr = msj.toUpperCase().split("");
   const cifradoArr = [];
 
@@ -16,10 +34,17 @@ const cifrar = (msj, despl = 3) => {
     }
     cifradoArr.push(String.fromCharCode(letra));
   }
-
-  return (msjCifrado = cifradoArr.join(""));
+  return (msjCifradoUni = cifradoArr.join(""));
 };
 
 cifrar(msj);
-document.write(`Mensaje original: ${msj.toUpperCase()}`);
-document.write(`<br> Mensaje cifrado: ${msjCifrado}`);
+cifrarUnicode(msj);
+
+document.write("Cifrado con for anidados");
+document.write(`<br> Mensaje original: ${msj.toUpperCase()}`);
+document.write(`<br> Mensaje cifrado: ${msjCifrado.toUpperCase()}`);
+
+document.write(`<br> ----- <br>`);
+document.write(`Cifrado con código unicode`);
+document.write(`<br> Mensaje original: ${msj.toUpperCase()}`);
+document.write(`<br> Mensaje cifrado: ${msjCifradoUni}`);
