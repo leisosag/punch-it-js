@@ -1,0 +1,26 @@
+{
+  "name": "rickandmorty",
+  "version": "1.0.0",
+  "description": "proyecto para consumir la API de rick and morty",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leisosag/rickandmorty.git"
+  },
+  "keywords": [
+    "Rick",
+    "and",
+    "Morty",
+    "API",
+    "Javascript"
+  ],
+  "author": "Leila Sosa Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leisosag/rickandmorty/issues"
+  },
+  "homepage": "https://github.com/leisosag/rickandmorty#readme"
+}
